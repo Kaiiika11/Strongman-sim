@@ -27,7 +27,7 @@ local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 local task_defer = task.defer
 local pairs = pairs
 local rs = game:GetService("RunService")
-local area = game:GetService("Workspace").Areas["Area23_Sewer"]
+local area = game:GetService("Workspace").Areas["Area14_Retro"]
 local fireproximityprompt = fireproximityprompt
 local prox
 local function GetBadges()
@@ -104,8 +104,8 @@ game:GetService("Workspace").PlayerDraggables[game.Players.LocalPlayer.UserId].D
 		end
 		repeat
 			wait(0.1)
-			firetouchinterest(added, game:GetService("Workspace").Areas["Area23_Sewer"].Goal, 0)
-			firetouchinterest(added, game:GetService("Workspace").Areas["Area23_Sewer"].Goal, 1)
+			firetouchinterest(added, game:GetService("Workspace").Areas["Area14_Retro"].Goal, 0)
+			firetouchinterest(added, game:GetService("Workspace").Areas["Area14_Retro"].Goal, 1)
 		until added == nil
 	end
 end)
@@ -119,7 +119,7 @@ task_defer(function()
 		end
 		repeat
 			task.wait(0.1)
-			testinterest(added, game:GetService("Workspace").Areas["Area23_Sewer"].Goal, "static")
+			testinterest(added, game:GetService("Workspace").Areas["Area14_Retro"].Goal, "static")
 		until added == nil
 	end
 end)
@@ -157,7 +157,7 @@ Settingss:addButton("Rejoin Server", function()
 	game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)
 end)
 local oldpos = HumanoidRootPart.CFrame
-HumanoidRootPart.CFrame = CFrame.new(-79.6281, 19.036, 8124.83, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+HumanoidRootPart.CFrame = CFrame.new(-79.0924, 19.076, 8124.74)
 wait(0.25)
 HumanoidRootPart.CFrame = oldpos
 for _, v in pairs(area.DraggableItems:GetDescendants()) do
@@ -179,13 +179,13 @@ end)
 
 autofarm:addToggle("Enabled", nil, function(value)
 	_G.On = value
-	HumanoidRootPart.CFrame = CFrame.new(-79.6281, 19.036, 8124.83, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	HumanoidRootPart.CFrame = CFrame.new(-79.0924, 19.076, 8124.74)
 	wait(0.1)
 	task_defer(function()
 		game.RunService.RenderStepped:connect(function()
 			task.wait(0.1)
 			if _G.On then
-				HumanoidRootPart.CFrame = CFrame.new(-79.6281, 19.036, 8124.83, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+				HumanoidRootPart.CFrame = CFrame.new(-79.0924, 19.076, 8124.74)
 				fireproximityprompt(_G.Prox, 0)
 			end
 		end)
@@ -193,14 +193,14 @@ autofarm:addToggle("Enabled", nil, function(value)
 end)
 autofarm2:addToggle("Enabled", nil, function(value)
 	_G.On2 = value
-	HumanoidRootPart.CFrame = CFrame.new(-79.6281, 19.036, 8124.83, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	HumanoidRootPart.CFrame = CFrame.new(-79.0924, 19.076, 8124.74)
 	HumanoidRootPart.Anchored = false
 	wait(0.1)
 	task_defer(function()
 		game.RunService.RenderStepped:connect(function()
 			if _G.On2 then
 			    workspace.Gravity = math.huge
-			    HumanoidRootPart.CFrame = CFrame.new(-79.6281, 19.036, 8124.83, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+			    HumanoidRootPart.CFrame = CFrame.new(-79.0924, 19.076, 8124.74)
 			    fireproximityprompt(_G.Prox, 0)
 			else
 			    workspace.Gravity = 196.2 
