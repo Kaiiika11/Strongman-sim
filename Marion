@@ -27,7 +27,7 @@ local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 local task_defer = task.defer
 local pairs = pairs
 local rs = game:GetService("RunService")
-local area = game:GetService("Workspace").Areas["Area14_Retro"]
+local area = game:GetService("Workspace").Areas["Area23_Sewer"]
 local fireproximityprompt = fireproximityprompt
 local prox
 local function GetBadges()
@@ -193,7 +193,7 @@ autofarm:addToggle("Enabled", nil, function(value)
 end)
 autofarm2:addToggle("Enabled", nil, function(value)
 	_G.On2 = value
-	HumanoidRootPart.CFrame = CFrame.new(109.783, 68.9136, 8127.95)
+	HumanoidRootPart.CFrame = CFrame.new(-109.966, 81.1445, 17902.4)
 	HumanoidRootPart.Anchored = false
 	wait(0.1)
 	task_defer(function()
