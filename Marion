@@ -27,7 +27,6 @@ local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 local task_defer = task.defer
 local pairs = pairs
 local rs = game:GetService("RunService")
-local area = game:GetService("Workspace").Areas["Area14_Retro"]
 local area = game:GetService("Workspace").Areas["Area23_Sewer"]
 local fireproximityprompt = fireproximityprompt
 local prox
@@ -105,8 +104,8 @@ game:GetService("Workspace").PlayerDraggables[game.Players.LocalPlayer.UserId].D
 		end
 		repeat
 			wait(0.1)
-			firetouchinterest(added, game:GetService("Workspace").Areas["Area14_Retro"].Goal, 0)
-			firetouchinterest(added, game:GetService("Workspace").Areas["Area14_Retro"].Goal, 1)
+			firetouchinterest(added, game:GetService("Workspace").Areas["Area23_Sewer"].Goal, 0)
+			firetouchinterest(added, game:GetService("Workspace").Areas["Area23_Sewer"].Goal, 1)
 		until added == nil
 	end
 end)
