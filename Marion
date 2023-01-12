@@ -161,7 +161,7 @@ HumanoidRootPart.CFrame = CFrame.new(109.782593, 18.9135895, 8127.95117, 1, 0, 0
 wait(0.25)
 HumanoidRootPart.CFrame = oldpos
 for _, v in pairs(area.DraggableItems:GetDescendants()) do
-	if v:IsA("StringValue") and v.Name == "Title" and v.Value == "Wired Cube" then
+	if v:IsA("StringValue") and v.Name == "Title" and v.Value == "WIRED CUBE" then
 		local part = v.Parent.InteractionPoint
 		_G.Prox = v.Parent.InteractionPoint.ProximityPrompt
 	end
