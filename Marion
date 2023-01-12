@@ -203,7 +203,7 @@ autofarm2:addToggle("Enabled", nil, function(value)
 			    HumanoidRootPart.CFrame = CFrame.new(-109.965828, 11.1445236, 17902.4023, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 			    fireproximityprompt(_G.Prox, 0)
 			else
-			    workspace.Gravity = 800
+			    workspace.Gravity = 20
 		    end
 		end)
 	end)
